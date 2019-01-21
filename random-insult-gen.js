@@ -17,19 +17,19 @@ function randomInsultGenerator(name){
 
     // allow user to insult a specific person
     if (!name){
-    var randomName = names[Math.floor(Math.random() * names.length)]
+    var randomName = names[Math.floor(Math.random() * names.length)];
     name = randomName
 }
 
     // grab random elements from arrays
-    var randomBodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)]
+    var randomBodyPart = bodyParts[Math.floor(Math.random() * bodyParts.length)];
 
     var pluralRandomBodyPart = pluralBodyParts[Math.floor(Math.random() *
      pluralBodyParts.length)]
 
-    var randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)]
+    var randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
 
-    var randomWord = words[Math.floor(Math.random() * words.length)]
+    var randomWord = words[Math.floor(Math.random() * words.length)];
 
     return name + ', your ' + randomBodyPart 
     + ' looks like a ' + randomAdjective + ' ' + randomWord + '!!!';
@@ -60,8 +60,16 @@ function addName(newName){
     names.push(newName);
 }
 
-var insult = randomInsultGenerator();
 
-console.log(insult)
+//console.log(insult);
 // Write something to check for the adjective starting with a vowel for a/an
 // Write something to check for plurality for look/looks
+
+module.exports = {
+    randomInsultGenerator:randomInsultGenerator,
+    addBodyPart:addBodyPart,
+    addPluralBodyPart:addPluralBodyPart,
+    addAdjective:addAdjective,
+    addWord:addWord,
+    addName:addName
+};
