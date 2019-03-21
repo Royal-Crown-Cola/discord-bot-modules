@@ -1,5 +1,4 @@
 var userInput = ['bulbasaur', 'charmander', 'squirtle'];
-var garyIsJustBetter = ['mewtwo']; 
 
 function getUserChoice(userInput) {
     userInput = userInput.toLowerCase();
